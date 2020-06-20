@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Drohnenaufnahmen</title>
+
+
+    <!--Swiper CSS -->
+    <link rel="stylesheet" href="../styles/stylesheet.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../styles/slider.css">
+    <link rel="stylesheet" href="../styles/loading.css">
+</head>
+<body>
+
+    <div id="main">
+        <!--Navigationssleiste-->
+        <div class="topnav sticky">
+            <a href="../index.html">Home</a>
+            <a class="active" href="#">Drohnenaufnahmen</a>
+            <a href="../Users/index.html">Benutzersystem</a>
+            <a href="../downloads/index.html">Downloads</a>
+        </div>
+
+
+
+
+
+
+
+        <div class="swiper-container">
+
+
+
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(footage/wald.jpeg)" onload="upgradeImage(this);" onclick="video('wald')"></div>
+                <div class="swiper-slide" style="background-image:url(footage/steinbruch.jpeg)" onload="upgradeImage(this);" onclick="video('steinbruch')"></div>
+                <div class="swiper-slide" style="background-image:url(footage/teiche.jpeg)" onload="upgradeImage(this);" onclick="video('teiche')"></div>
+                <div class="swiper-slide" style="background-image:url(footage/elsasruh.jpeg)" onload="upgradeImage(this);" onclick="video('elsasruh')"></div>
+                <div class="swiper-slide" style="background-image:url(footage/elbe.jpeg)" onload="upgradeImage(this);" onclick="video('paddeln')"></div>
+                <!--<div class="swiper-slide" style="background-image:url(footage/drohne.jpeg)" onload="upgradeImage(this);" onclick="video('steinbruch')"></div>-->
+            </div>
+
+
+
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div id="snackbar">Klicke auf ein Bild um dir das dazugehörige Video anzusehen!</div>
+
+
+    <div id="load" class='spinner'>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+        <i>
+            <b></b>
+        </i>
+    </div>
+
+
+
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 21,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+            },
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            /*autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },*/
+        });
+    </script>
+
+    <script src="../javascripts/preload.js"></script>
+    <script src="../javascripts/intro.js"></script>
+</body>
+</html>
