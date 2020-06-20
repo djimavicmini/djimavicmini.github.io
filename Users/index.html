@@ -1,0 +1,88 @@
+<html>
+<head>
+    <title>Benutzersystem</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!--Navigationssleiste-->
+    <div class="topnav sticky">
+        <a href="../index.html">Home</a>
+        <a href="../drone/index.html">Drohnenaufnahmen</a>
+        <a class="active" href="#">Benutzersystem</a>
+        <a href="../downloads/index.html">Downloads</a>
+    </div>
+
+    <div id="login_div" class="main-div">
+        <h3>Login</h3>
+        <input type="email" placeholder="Email..." id="email_field" />
+        <input type="password" placeholder="Passwort..." id="password_field" />
+
+        <button onclick="login()">Einloggen</button>
+
+        <p onclick="openRegister()" class="pointer">Du hast noch kein Account? Dann registriere dich hier!</p>
+    </div>
+
+    <div id="register_div" class="register-div">
+        <h3>Registrieren</h3>
+        <input type="email" placeholder="Email..." id="email_field_register" />
+        <input type="password" placeholder="Passwort..." id="password_field_register" />
+
+        <button onclick="register()">Registrieren</button>
+
+        <p onclick="openLogin()" class="pointer">Du hast schon ein Account? Dann melde dich hier an!</p>
+
+    </div>
+
+
+    <div id="user_div" class="loggedin-div">
+        <h3>Wilkommen</h3>
+        <p id="user_para">Willkommen. Du Bist eingeloggt</p>
+        <button onclick="logout()">Logout</button>
+
+        <p onclick="addUsername()" class="pointer">Benutzernamen &auml;ndern</p>
+
+        <div class="invisible" id="newUsername">
+            <input class="input" type="text" placeholder="Benutzername..." id="username_field" />
+            <button onclick="saveUsername()">Speichern</button>
+        </div>
+    </div>
+
+    <div id="snackbar">Gespeichert!</div>
+    <div id="snackbarErr">Fehler!</div>
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBuX3Sj-P13GPSMDGe2p8AuQaqxMwNip7Q",
+            authDomain: "lostplacemap.firebaseapp.com",
+            databaseURL: "https://lostplacemap.firebaseio.com",
+            projectId: "lostplacemap",
+            storageBucket: "lostplacemap.appspot.com",
+            messagingSenderId: "926930385827",
+            appId: "1:926930385827:web:ad7dafc38363db70bdf816",
+            measurementId: "G-FVLFY2CPL9"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

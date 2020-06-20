@@ -1,0 +1,32 @@
+/*Animation*/
+.heading {
+
+  -webkit-transform: translate(-50%, calc(-50% + 1em));
+          transform: translate(-50%, calc(-50% + 1em));
+}
+
+/*Animation*/
+.is-visible {
+  -webkit-transform: none;
+          transform: none;
+}
+
+/*Animation*/
+.is-visible .heading {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/*"Einfliegen"*/
+.heading {
+transition: all 2s;
+}
+
+
+
+/* Navigationsleiste --> "sticky" (position beibehalten) */
+.sticky {
+ position: fixed;
+ /*Volle Breite*/
+ width: 100%;
+}

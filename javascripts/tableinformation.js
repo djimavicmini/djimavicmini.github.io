@@ -1,0 +1,1 @@
+window.alert("Die Tabelle und der externe Link befindet sich ganz unten!");

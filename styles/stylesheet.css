@@ -1,0 +1,363 @@
+/*Bessere Schritart von Google Fonts importieren*/
+@import url('https://fonts.googleapis.com/css?family=Butterfly+Kids|Roboto');
+
+* {
+    /*Bessere Schriftart*/
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Navigationsleiste(Farben usw.)*/
+.topnav {
+    overflow: hidden;
+    background-color: #303030;
+}
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+        .topnav a:hover {
+            background-color: #585858;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #980000;
+            color: white;
+        }
+
+
+/*Ränder entfernen*/
+.mar {
+    margin: 0;
+    padding: 0;
+}
+/*position beibehalten jedoch NICHT wie in scroll.css volle Breite ausnutzen*/
+.sticky0 {
+    position: fixed;
+}
+
+
+html,
+.wrapper {
+    text-align: center;
+}
+
+
+.clip-text {
+    font-size: 6em;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    margin: .25em;
+    padding: .5em .75em;
+    text-align: center;
+    /*Bild in Text*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h3 {
+    color: white;
+}
+
+
+
+/* Zufälliges Hintergrundbild */
+.clip-text_ten {
+    background-image: url(https://picsum.photos/480/200?random=7);
+}
+
+
+
+
+
+
+
+
+.margin {
+    margin: 16px;
+}
+
+.margin-top {
+    margin-top: 160px
+}
+
+.margin-bottom {
+    margin-bottom: 16px
+}
+
+
+
+
+
+
+/*Button*/
+.button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+/*Bilder, Abstand, Ausrichtung*/
+.container:before,
+.row:after,
+.bar:before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col {
+    float: left;
+}
+
+@media (min-width:993px) {
+    /*Für Profil*/
+    .col.l4 {
+        width: 33.33333%;
+        position: fixed;
+    }
+    /*Für Beiträge*/
+    .col.l8 {
+        float: right;
+        width: 66.66666%
+    }
+}
+
+.container,
+.panel {
+    padding: 0.01em 16px
+}
+
+.panel {
+    margin-top: 16px;
+    margin-bottom: 16px
+}
+/*mehr Weiß an den Ränder(für Name)*/
+.paddingLR {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.center {
+    text-align: center
+}
+
+.margin {
+    margin: 16px
+}
+
+.margin-top {
+    margin-top: 16px
+}
+
+.margin-bottom {
+    margin-bottom: 16px
+}
+
+.padding {
+    padding-top: 32px;
+    padding-bottom: 32px
+}
+
+.padding-48 {
+    padding-top: 48px;
+    padding-bottom: 48px
+}
+
+.button:hover {
+    color: #000;
+    background-color: #ccc
+}
+
+/*Farben*/
+.white,
+.hover-white:hover {
+    color: #000;
+    background-color: #fff
+}
+
+.black,
+.hover-black:hover {
+    color: #fff;
+    background-color: #000
+}
+
+.dark-grey {
+    color: #fff;
+    background-color: #616161
+}
+
+
+@keyframes animationTH {
+    0% {
+        background-color: #00007f;
+    }
+
+    25% {
+        color: black;
+        background-color: yellow;
+    }
+
+    90% {
+        color: black;
+        background-color: green;
+    }
+
+    100% {
+        color: white;
+        background-color: #00007f;
+    }
+}
+
+/*´Zeilen animieren aber hellere Farben nutzen da schrift schwarz*/
+@keyframes animationTR {
+    0% {
+        background-color: #f2f2f2;
+    }
+
+    25% {
+        background-color: gold;
+    }
+
+    90% {
+        background-color: lightgreen;
+    }
+
+    100% {
+        background-color: #f2f2f2;
+    }
+}
+
+.tb {
+    width: 100%;
+}
+    /*jede 2. zeile hinterlegen*/
+    .tb tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    /*zeilen animieren*/
+    .tb tr:hover {
+        animation-name: animationTR;
+        animation-duration: 10s;
+    }
+    /*Tabellenkopf etwas animieren*/
+    .tb th:hover {
+        animation-name: animationTH;
+        animation-duration: 10s;
+    }
+    /*Tabellenkopf etwas stylen*/
+    .tb th {
+        padding: 5px;
+        background-color: #00007f;
+        color: white;
+    }
+
+@keyframes animationSO {
+
+    90% {
+        color: gold;
+        font-size: 40px;
+        letter-spacing: 10px;
+    }
+}
+
+.linktostackoverflowdiv {
+    padding: 50px;
+    margin: 20px;
+}
+
+.linktostackoverflow {
+    text-decoration: none;
+}
+
+    .linktostackoverflow:hover {
+        animation: animationSO 5s;
+    }
+
+.hidden {
+    display: none;
+}
+
+
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    right: 50%;
+    bottom: 35%;
+    font-size: 20px;
+}
+
+    #snackbar.show{
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 5s;
+        animation: fadein 0.5s, fadeout 0.5s 5s;
+    }
+
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 5%;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 35%;
+        opacity: 1;
+    }
+}
+
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 35%;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    to {
+        bottom: 5%;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+
+html .x {
+    padding: 0px;
+    margin: 0px;
+    font-size: 70px;
+    text-decoration: none;
+    color: white;
+}
+
+#video {
+ margin: 17px;
+}
